@@ -1,0 +1,27 @@
+kind = "video"
+previewPath = "/usdhkd-promo/"
+title = "USD/HKD Edge — Promo Video"
+version = "1.0.0"
+id = "artifacts/usdhkd-promo"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/usdhkd-promo/" ]
+localPort = 25917
+
+[services.development]
+run = "pnpm --filter @workspace/usdhkd-promo run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/usdhkd-promo", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/usdhkd-promo/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25917"
+BASE_PATH = "/usdhkd-promo/"

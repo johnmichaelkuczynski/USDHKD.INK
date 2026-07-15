@@ -1,0 +1,20 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "JQRXpm7ZIVXYSOscoyJZU"
+uri = "file://attached_assets/generated_audio/bg_music.mp3"
+type = "audio"
+title = "usdhkd-edge-bg-music"
+
+[[outputs]]
+id = "4i5c3nUSqt83Xw_HQtbtU"
+uri = "file://attached_assets/generated_audio/voiceover.mp3"
+type = "audio"
+title = "usdhkd-edge-voiceover"
+
+[[outputs]]
+id = "dyFoJY-b5dXkDkVQRWOIO"
+uri = "file://attached_assets/generated_audio/voiceover_2.mp3"
+type = "audio"
+title = "usdhkd-edge-voiceover"
