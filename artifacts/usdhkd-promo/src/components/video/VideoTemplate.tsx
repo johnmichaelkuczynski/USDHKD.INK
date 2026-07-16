@@ -1,16 +1,15 @@
-import { useEffect, useRef } from 'react';
-import { asset } from '@/lib/assetUrl';
 import { AnimatePresence } from 'framer-motion';
 import { useVideoPlayer } from '@/lib/video';
+import { useAudio } from '@/lib/video/useAudio';
 
-import IntroScene       from './scenes/IntroScene';
-import PegScene         from './scenes/PegScene';
+import IntroScene        from './scenes/IntroScene';
+import PegScene          from './scenes/PegScene';
 import AppDashboardScene from './scenes/AppDashboardScene';
-import ModelsScene      from './scenes/ModelsScene';
-import MonteCarloScene  from './scenes/MonteCarloScene';
-import EquilibriumScene from './scenes/EquilibriumScene';
-import BacktestScene    from './scenes/BacktestScene';
-import CTAScene         from './scenes/CTAScene';
+import ModelsScene       from './scenes/ModelsScene';
+import MonteCarloScene   from './scenes/MonteCarloScene';
+import EquilibriumScene  from './scenes/EquilibriumScene';
+import BacktestScene     from './scenes/BacktestScene';
+import CTAScene          from './scenes/CTAScene';
 
 // Scene durations in milliseconds — total ≈ 90 s
 const SCENE_DURATIONS = {
@@ -25,35 +24,16 @@ const SCENE_DURATIONS = {
 };
 
 export default function VideoTemplate() {
-  const voiceRef = useRef<HTMLAudioElement>(null);
-  const musicRef = useRef<HTMLAudioElement>(null);
+  // Web Audio API — captured by the MediaRecorder; plain <audio> elements are not.
+  useAudio({ musicVolume: 0.18, startDelay: 0.5 });
 
   const { currentScene } = useVideoPlayer({
     durations: SCENE_DURATIONS,
     loop: false,
   });
 
-  // Auto-start audio on first render (video-js recorder captures audio elements)
-  useEffect(() => {
-    const tryPlay = () => {
-      voiceRef.current?.play().catch(() => {});
-      if (musicRef.current) {
-        musicRef.current.volume = 0.18;
-        musicRef.current.play().catch(() => {});
-      }
-    };
-    // small delay to let the recorder attach before audio starts
-    const t = setTimeout(tryPlay, 400);
-    return () => clearTimeout(t);
-  }, []);
-
   return (
     <div className="w-full h-screen overflow-hidden relative bg-[#050c14]">
-      {/* ── Audio tracks ── */}
-      <audio ref={voiceRef} src={asset('audio/voiceover.mp3')} preload="auto" />
-      <audio ref={musicRef} src={asset('audio/bg_music.mp3')}  preload="auto" loop />
-
-      {/* ── Scenes ── */}
       <AnimatePresence mode="wait">
         {currentScene === 0 && <IntroScene        key="intro" />}
         {currentScene === 1 && <PegScene          key="peg" />}
