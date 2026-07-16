@@ -48,3 +48,9 @@ id = "uBFexfDle79ofsk7u08Ee"
 uri = "file://attached_assets/generated_videos/clip_trading_room.mp4"
 type = "video"
 title = "Clip 4 — Trading Room (Scene 6 bg)"
+
+[[outputs]]
+id = "6Pl5jMtaUZTW8NNvBlIZu"
+uri = "file://attached_assets/usdhkd_edge_promo.mp4"
+type = "video"
+title = "USD/HKD Edge — Promo Video (with audio)"
