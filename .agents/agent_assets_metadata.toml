@@ -18,3 +18,9 @@ id = "dyFoJY-b5dXkDkVQRWOIO"
 uri = "file://attached_assets/generated_audio/voiceover_2.mp3"
 type = "audio"
 title = "usdhkd-edge-voiceover"
+
+[[outputs]]
+id = "NHqoUG04iE8W2PErFTMI6"
+uri = "file://attached_assets/generated_audio/voiceover_final.mp3"
+type = "audio"
+title = "usdhkd-edge-voiceover-final"
