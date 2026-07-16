@@ -70,7 +70,7 @@ export default function CTAScene() {
               boxShadow: 'var(--glow-teal)',
             }}>
               <span style={{ fontFamily: 'var(--font-mono)', fontSize: '1.4rem', color: 'var(--color-primary)', letterSpacing: '0.06em' }}>
-                usdhkdxyz.replit.app
+                usdhkd.ink
               </span>
             </div>
 
