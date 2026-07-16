@@ -5,7 +5,7 @@ generated = []
 id = "JQRXpm7ZIVXYSOscoyJZU"
 uri = "file://attached_assets/generated_audio/bg_music.mp3"
 type = "audio"
-title = "usdhkd-edge-bg-music"
+title = "Background Music"
 
 [[outputs]]
 id = "4i5c3nUSqt83Xw_HQtbtU"
@@ -23,4 +23,28 @@ title = "usdhkd-edge-voiceover"
 id = "NHqoUG04iE8W2PErFTMI6"
 uri = "file://attached_assets/generated_audio/voiceover_final.mp3"
 type = "audio"
-title = "usdhkd-edge-voiceover-final"
+title = "Voiceover (final — no URL)"
+
+[[outputs]]
+id = "L_ZNP5pjxdEB_K6RQmtS8"
+uri = "file://attached_assets/generated_videos/clip_hk_skyline.mp4"
+type = "video"
+title = "Clip 1 — HK Skyline (Scenes 1–2 bg)"
+
+[[outputs]]
+id = "uRS97mltY7IJtrcXe7H-V"
+uri = "file://attached_assets/generated_videos/clip_intro.mp4"
+type = "video"
+title = "Clip 2 — Data Stream (Scene 3 bg)"
+
+[[outputs]]
+id = "T5iiywLTzCkjGHgtstd15"
+uri = "file://attached_assets/generated_videos/clip_montecarlo.mp4"
+type = "video"
+title = "Clip 3 — Monte Carlo (Scene 5 bg)"
+
+[[outputs]]
+id = "uBFexfDle79ofsk7u08Ee"
+uri = "file://attached_assets/generated_videos/clip_trading_room.mp4"
+type = "video"
+title = "Clip 4 — Trading Room (Scene 6 bg)"
