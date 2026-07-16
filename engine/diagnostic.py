@@ -336,7 +336,8 @@ def run_diagnostic() -> dict:
 
     # System group
     r.run("Environment: EODHD present", "system",
-          lambda: _check_env_required("EODHD"))
+          lambda: _check_env_required("EODHD_API_KEY") if os.environ.get("EODHD_API_KEY")
+          else _check_env_required("EODHD"))
     r.run("Environment: ANTHROPIC present", "system",
           lambda: _check_env_optional("ANTHROPIC"))
     r.run("Environment: POLYGON present", "system",
